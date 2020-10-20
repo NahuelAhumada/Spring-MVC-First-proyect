@@ -10,4 +10,8 @@ public class MainController {
 		public String welcome() {
 			return "hello";
 		}
+		@RequestMapping(value = "displayname")
+		public String displayName() {
+			return "displayName";
+		}
 }

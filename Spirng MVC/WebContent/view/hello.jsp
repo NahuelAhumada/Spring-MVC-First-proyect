@@ -8,7 +8,7 @@
 </head>
 <body>
 please enter your name
-<form action="displayName">
+<form action="displayname">
 	<input type="text" name="firstName">
 	<input type="submit" value="Submit">
 	
