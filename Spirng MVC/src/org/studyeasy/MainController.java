@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
 
 @Controller
 public class MainController {
@@ -15,8 +17,9 @@ public class MainController {
 			return "hello";
 		}
 		@RequestMapping(value = "displayname")
-		public String displayName(@RequestParam("firstName") String firstName, Model model) {
-			model.addAttribute("name",firstName);
-			return "displayName";
+		public ModelAndView displayName(@RequestParam("firstName") String firstName) {
+			ModelAndView modelAndView = new ModelAndView("displayName");
+			modelAndView.addObject("name",firstName);
+			return modelAndView;
 		}
 }
