@@ -7,7 +7,12 @@
 <title>Hello</title>
 </head>
 <body>
-Hello World!
+please enter your name
+<form action="displayName">
+	<input type="text" name="firstName">
+	<input type="submit" value="Submit">
+	
+</form>
 
 </body>
 </html>
