@@ -15,7 +15,7 @@ public class MainController {
 		@RequestMapping(value = "displayname")
 		public String displayName(HttpServletRequest request) {
 			String firstName=request.getParameter("firstName");
-			request.setAttribute("firtsName", firstName);
+			request.setAttribute("firstName", firstName);
 			return "displayName";
 		}
 }
