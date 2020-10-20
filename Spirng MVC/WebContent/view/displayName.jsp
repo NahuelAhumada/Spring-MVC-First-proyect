@@ -7,6 +7,6 @@
 <title>Name view</title>
 </head>
 <body>
-Hello <%= request.getAttribute("firstName") %>
+Hello ${name}
 </body>
 </html>
