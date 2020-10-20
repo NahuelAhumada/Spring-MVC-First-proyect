@@ -11,6 +11,10 @@
 Today is ${ date} <br>
 Hello ${name} <br>
 
-List of team members
+List of team members: <br>
+
+<c:forEach var="temp" items="${team }">
+	${temp }<br>
+</c:forEach>
 </body>
 </html>
