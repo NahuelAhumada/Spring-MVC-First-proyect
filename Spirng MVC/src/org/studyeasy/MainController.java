@@ -1,5 +1,7 @@
 package org.studyeasy;
 
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -20,7 +22,9 @@ public class MainController {
 		@GetMapping(value = "displayname")
 		public ModelAndView displayName(@RequestParam("firstName") String firstName) {
 			ModelAndView modelAndView = new ModelAndView("displayName");
+			Date date = new Date();
 			modelAndView.addObject("name",firstName);
+			modelAndView.addObject("date", date);
 			return modelAndView;
 		}
 }
