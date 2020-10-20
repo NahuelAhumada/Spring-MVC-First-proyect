@@ -7,7 +7,9 @@
 <title>Name view</title>
 </head>
 <body>
-Today is ${ date}
-Hello ${name}
+Today is ${ date} <br>
+Hello ${name} <br>
+
+List of team members
 </body>
 </html>

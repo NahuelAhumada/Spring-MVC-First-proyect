@@ -1,6 +1,8 @@
 package org.studyeasy;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,8 +25,14 @@ public class MainController {
 		public ModelAndView displayName(@RequestParam("firstName") String firstName) {
 			ModelAndView modelAndView = new ModelAndView("displayName");
 			Date date = new Date();
+			List<String> names=new ArrayList<>();
+			names.add("Nahuel");
+			names.add("Oscar");
+			names.add("Emiliano");
+			
 			modelAndView.addObject("name",firstName);
 			modelAndView.addObject("date", date);
+			modelAndView.addObject("team", names);
 			return modelAndView;
 		}
 }
