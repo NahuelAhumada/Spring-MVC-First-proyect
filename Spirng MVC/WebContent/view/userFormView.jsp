@@ -16,7 +16,7 @@
 			<br>
 	Country: <form:select path="country">
 				<form:option value="Argentina" ></form:option>
-				<form:option value="USA" ></form:option>
+				<form:option value="USA" label="United States"></form:option>
 				<form:option value="Uruguay" ></form:option>
 				<form:option value="Mexico" ></form:option>
 			</form:select>
