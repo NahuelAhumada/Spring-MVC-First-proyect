@@ -7,20 +7,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User form</title>
+
+</head>
+<body>
 <form:form action="displayUserInfo" modelAttribute="user">
 	Name: <form:input path="name"/><p/>
 	Gender: <form:radiobuttons path="gender" items="${genderMap}" />
 			<br>
-			<input type="submit" value="Submit">
 	Country: <form:select path="">
 				<form:option value="Argentina" ></form:option>
 				<form:option value="USA" ></form:option>
 				<form:option value="Uruguay" ></form:option>
 				<form:option value="Mexico" ></form:option>
 			</form:select>
+			<p/>
+	<input type="submit" value="Submit">
 </form:form>
-</head>
-<body>
 
 </body>
 </html>
