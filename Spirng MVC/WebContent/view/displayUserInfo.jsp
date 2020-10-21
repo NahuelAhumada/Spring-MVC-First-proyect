@@ -12,7 +12,12 @@
 Name: ${user.name}<p/>
 Gender: ${user.gender}<p/>
 Country: ${user.country}<p/>
-Intro: ${user.introduction}<p/>
-
+Introduction: ${user.introduction}<p/>
+Visited Countries:
+<ul>
+<c:forEach items="${user.visitedCountries}" var="item">
+	<li>${item}</li>
+</c:forEach>
+</ul>
 </body>
 </html>
