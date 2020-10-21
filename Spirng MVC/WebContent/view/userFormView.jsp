@@ -18,6 +18,12 @@
 			<p/>
 	Introduction: 
 		<form:textarea path="introduction"/><p/>
+	Visited countries: 
+			China: <form:checkbox path="" value="China"/>
+			Japon: <form:checkbox path="" value="Japon"/>
+			Suecia: <form:checkbox path="" value="Suecia"/>
+			Noruega: <form:checkbox path="" value="Noruega"/>
+	<p/>
 	<input type="submit" value="Submit">
 </form:form>
 
