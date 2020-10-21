@@ -17,22 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainController {
-		@RequestMapping(value="/", method=RequestMethod.GET)
-		public String welcome() {
-			return "hello";
+		@GetMapping("/")
+		public ModelAndView home() {
+			ModelAndView model=new ModelAndView();
+			return model;
 		}
-		@GetMapping(value = "displayname")
-		public ModelAndView displayName(@RequestParam("firstName") String firstName) {
-			ModelAndView modelAndView = new ModelAndView("displayName");
-			Date date = new Date();
-			List<String> names=new ArrayList<>();
-			names.add("Nahuel");
-			names.add("Oscar");
-			names.add("Emiliano");
-			
-			modelAndView.addObject("name",firstName);
-			modelAndView.addObject("date", date);
-			modelAndView.addObject("team", names);
-			return modelAndView;
-		}
+		
 }
