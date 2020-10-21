@@ -11,7 +11,8 @@
 <body>
 Name: ${user.name}<p/>
 Gender: ${user.gender}<p/>
-Country: ${user.country}
+Country: ${user.country}<p/>
+Intro: ${user.introduction}<p/>
 
 </body>
 </html>
