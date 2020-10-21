@@ -29,7 +29,7 @@ public class MainController {
 			Map<String, String> genderMap=new HashMap<String,String>();
 			genderMap.put("male", "Male");
 			genderMap.put("female", "Female");
-			modelAndView.addObject("gender",genderMap);
+			modelAndView.addObject("genderMap",genderMap);
 			modelAndView.addObject("user",user);
 			return modelAndView;
 		}
