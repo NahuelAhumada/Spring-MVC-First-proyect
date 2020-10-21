@@ -16,6 +16,8 @@
 			<br>
 	Country: <form:select path="country" items="${countryMap}"/>
 			<p/>
+	Introduction: 
+		<form:textarea path=""/><p/>
 	<input type="submit" value="Submit">
 </form:form>
 
