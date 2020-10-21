@@ -14,12 +14,7 @@
 	Name: <form:input path="name"/><p/>
 	Gender: <form:radiobuttons path="gender" items="${genderMap}" />
 			<br>
-	Country: <form:select path="country">
-				<form:option value="Argentina" ></form:option>
-				<form:option value="USA" label="United States"></form:option>
-				<form:option value="Uruguay" ></form:option>
-				<form:option value="Mexico" ></form:option>
-			</form:select>
+	Country: <form:select path="country" items="${countryMap}"/>
 			<p/>
 	<input type="submit" value="Submit">
 </form:form>
