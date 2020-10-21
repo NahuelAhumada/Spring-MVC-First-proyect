@@ -26,9 +26,19 @@ public class MainController {
 		public ModelAndView home() {
 			ModelAndView modelAndView=new ModelAndView("userFormView");
 			User user=new User();
+			//Gender Map
 			Map<String, String> genderMap=new HashMap<String,String>();
 			genderMap.put("male", "Male");
 			genderMap.put("female", "Female");
+			//Country Map
+			Map<String,String> countryMap=new HashMap<String,String>();
+			countryMap.put("Argentina", "Argentina");
+			countryMap.put("USA", "United States");
+			countryMap.put("Uruguay", "Uruguay");
+			countryMap.put("Bolivia", "Bolivia");
+			countryMap.put("Ecuador", "Ecuador");
+			
+			modelAndView.addObject("countryMap", countryMap);
 			modelAndView.addObject("genderMap",genderMap);
 			modelAndView.addObject("user",user);
 			return modelAndView;
