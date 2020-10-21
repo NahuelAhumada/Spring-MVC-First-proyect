@@ -1,7 +1,9 @@
 package org.studyeasy.model;
 
+import java.util.Arrays;
+
 public class User {
-	private String name, gender, country, introduction;
+	private String name, gender, country, introduction, visitedCountries[];
 
 	public String getName() {
 		return name;
@@ -36,12 +38,22 @@ public class User {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
+	
+	public String[] getVisitedCountries() {
+		return visitedCountries;
+	}
+
+	public void setVisitedCountries(String[] visitedCountries) {
+		this.visitedCountries = visitedCountries;
+	}
 
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", gender=" + gender + ", country=" + country + ", introduction=" + introduction
-				+ "]";
+				+ ", visitedCountries=" + Arrays.toString(visitedCountries) + "]";
 	}
+
+	
 
 	
 
