@@ -7,10 +7,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User form</title>
-<form:form action="displayUserInfo">
-	Name: <form:input path=""/><p/>
-	Gender: Male <form:radiobutton path="" value="male"/>
-			Female <form:radiobutton path="" value="female"/>
+<form:form action="displayUserInfo" modelAttribute="user">
+	Name: <form:input path="name"/><p/>
+	Gender: Male <form:radiobutton path="gender" value="male"/>
+			Female <form:radiobutton path="gender" value="female"/>
 			<p/>
 			<input type="submit" value="Submit">
 </form:form>
