@@ -30,7 +30,6 @@ public class MainController {
 		@PostMapping("/displayUserInfo")
 		public ModelAndView displayUserInfo(@ModelAttribute User user) {
 			ModelAndView modelAndView=new ModelAndView("displayUserInfo");
-			System.out.println(user);
 			modelAndView.addObject("user",user);
 			return modelAndView;
 		}
