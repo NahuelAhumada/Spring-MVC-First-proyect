@@ -19,8 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class MainController {
 		@GetMapping("/")
 		public ModelAndView home() {
-			ModelAndView model=new ModelAndView();
-			return model;
+			ModelAndView modelAndView=new ModelAndView("userFormView");
+			
+			return modelAndView;
 		}
 		
 }
