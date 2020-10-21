@@ -2,7 +2,9 @@ package org.studyeasy;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,6 +26,10 @@ public class MainController {
 		public ModelAndView home() {
 			ModelAndView modelAndView=new ModelAndView("userFormView");
 			User user=new User();
+			Map<String, String> gender=new HashMap<String,String>();
+			gender.put("male", "Male");
+			gender.put("female", "Female");
+			modelAndView.addObject("gender",gender);
 			modelAndView.addObject("user",user);
 			return modelAndView;
 		}
