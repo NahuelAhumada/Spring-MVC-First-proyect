@@ -1,7 +1,7 @@
 package org.studyeasy.model;
 
 public class User {
-	private String name, gender, country;
+	private String name, gender, country, introduction;
 
 	public String getName() {
 		return name;
@@ -27,11 +27,23 @@ public class User {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+	
+
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", gender=" + gender + ", country=" + country + "]";
+		return "User [name=" + name + ", gender=" + gender + ", country=" + country + ", introduction=" + introduction
+				+ "]";
 	}
+
+	
 
 	
 }
