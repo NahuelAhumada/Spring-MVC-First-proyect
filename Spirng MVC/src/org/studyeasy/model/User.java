@@ -2,8 +2,16 @@ package org.studyeasy.model;
 
 import java.util.Arrays;
 
+import javax.validation.constraints.Size;
+
 public class User {
-	private String name, gender, country, introduction, visitedCountries[];
+	
+	@Size(min=5, max=12)
+	private String name;
+	private String gender;
+	private String country;
+	private String introduction;
+	private String visitedCountries[];
 
 	public String getName() {
 		return name;
