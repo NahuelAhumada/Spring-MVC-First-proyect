@@ -14,13 +14,13 @@
 <h4>Submit your information</h4>
 <hr/>
 <form:form action="displayUserInfo" modelAttribute="user">
-	Name: <form:input path="name"/><p/>
-	Gender: <form:radiobuttons path="gender" items="${genderMap}" />
+	Name: <form:input path="name" required="true" placeholder="Enter name"/><p/>
+	Gender: <form:radiobuttons path="gender" required="true" items="${genderMap}" />
 			<br>
 	Country: <form:select path="country" items="${countryMap}"/>
 			<p/>
 	Introduction: 
-		<form:textarea path="introduction"/><p/>
+		<form:textarea path="introduction" required="true"/><p/>
 	Visited countries: 
 			China: <form:checkbox path="visitedCountries" value="China"/>
 			Japon: <form:checkbox path="visitedCountries" value="Japon"/>
