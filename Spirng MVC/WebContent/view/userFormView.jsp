@@ -23,9 +23,11 @@
 		<form:textarea path="introduction" required="true"/><p/>
 	Visited countries: 
 			China: <form:checkbox path="visitedCountries" value="China"/>
-			Japon: <form:checkbox path="visitedCountries" value="Japon"/>
-			Suecia: <form:checkbox path="visitedCountries" value="Suecia"/>
-			Noruega: <form:checkbox path="visitedCountries" value="Noruega"/>
+			Japan: <form:checkbox path="visitedCountries" value="Japon"/>
+			Sweden: <form:checkbox path="visitedCountries" value="Sweden"/>
+			Norway: <form:checkbox path="visitedCountries" value="Norway"/>
+	<p/>
+	Accept
 	<p/>
 	<input type="submit" value="Submit">
 </form:form>
