@@ -27,7 +27,7 @@
 			Sweden: <form:checkbox path="visitedCountries" value="Sweden"/>
 			Norway: <form:checkbox path="visitedCountries" value="Norway"/>
 	<p/>
-	Accept terms and conditions: <form:checkbox path="" required="true"/>
+	Accept terms and conditions: <form:checkbox path="" value="Accept" required="true"/>
 	<p/>
 	<input type="submit" value="Submit">
 </form:form>
