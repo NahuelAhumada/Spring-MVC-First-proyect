@@ -49,8 +49,30 @@ public class MainController {
 		public ModelAndView displayUserInfo(@Valid User user, BindingResult result) {
 			ModelAndView modelAndView=new ModelAndView("displayUserInfo");
 			modelAndView.addObject("user",user);
+			if(result.hasErrors()) {
+				System.out.println("Has errors!!");
+				ModelAndView repopulatingFormView=new ModelAndView("userFormView","user",user);
+				//Gender Map
+				Map<String, String> genderMap=new HashMap<String,String>();
+				genderMap.put("male", "Male");
+				genderMap.put("female", "Female");
+				//Country Map
+				Map<String,String> countryMap=new HashMap<String,String>();
+				countryMap.put("Argentina", "Argentina");
+				countryMap.put("USA", "United States");
+				countryMap.put("Uruguay", "Uruguay");
+				countryMap.put("Bolivia", "Bolivia");
+				countryMap.put("Ecuador", "Ecuador");
+				
+				repopulatingFormView.addObject("countryMap", countryMap);
+				repopulatingFormView.addObject("genderMap",genderMap);
+				repopulatingFormView.addObject("user",user);
+				return repopulatingFormView;
+			}else {
+				System.out.println("All good!");
+				return modelAndView;
+			}
 			
-			return modelAndView;
 		}
 		
 }
