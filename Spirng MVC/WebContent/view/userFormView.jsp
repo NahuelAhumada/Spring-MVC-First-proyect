@@ -7,9 +7,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User form</title>
+<style type="text/css">
+body {
+  background-color: lightblue;
+}
 
+h4 {
+  color: navy;
+  margin-left: 20px;
+}
+</style>
 </head>
 <body>
+<h4>Submit your information</h4>
+<hr/>
 <form:form action="displayUserInfo" modelAttribute="user">
 	Name: <form:input path="name"/><p/>
 	Gender: <form:radiobuttons path="gender" items="${genderMap}" />
