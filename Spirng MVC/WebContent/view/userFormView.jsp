@@ -7,16 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User form</title>
-<style type="text/css">
-body {
-  background-color: lightblue;
-}
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/files/css/style.css">
 
-h4 {
-  color: navy;
-  margin-left: 20px;
-}
-</style>
 </head>
 <body>
 <h4>Submit your information</h4>
