@@ -14,7 +14,7 @@
 <h4>Submit your information</h4>
 <hr/>
 <form:form action="displayUserInfo" modelAttribute="user">
-	Name: <form:input path="name" required="true" placeholder="Enter name"/>
+	Name: <form:input path="name" required="true" placeholder="Enter name"/><p/>
 		  <form:errors path="name" cssStyle="color:red"/>
 	<p/>
 	Gender: Male: <form:radiobutton path="gender" value="Male" required="true" />
