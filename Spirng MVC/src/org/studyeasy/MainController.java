@@ -6,6 +6,7 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.studyeasy.model.User;
@@ -21,7 +22,7 @@ public class MainController {
 			return modelAndView;
 		}
 		@PostMapping("/displayUserInfo")
-		public ModelAndView displayUserInfo(@Valid User user, BindingResult result) {
+		public ModelAndView displayUserInfo(@ModelAttribute("user") @Valid User user, BindingResult result) {
 			ModelAndView modelAndView=new ModelAndView("displayUserInfo");
 			modelAndView.addObject("user",user);
 			if(result.hasErrors()) {
