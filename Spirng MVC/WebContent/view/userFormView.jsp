@@ -18,7 +18,13 @@
 	Gender: Male: <form:radiobutton path="gender" value="Male" required="true" />
 			Female: <form:radiobutton path="gender" value="Female" required="true" />
 			<br>
-	Country: <form:select path="country" items="${countryMap}"/>
+	Country: <form:select path="country" >
+			<form:option value="Argentina"></form:option>
+			<form:option value="USA" label="United States"></form:option>
+			<form:option value="Uruguay"></form:option>
+			<form:option value="Bolivia"></form:option>
+			<form:option value="Ecuador"></form:option>
+			</form:select>
 			<p/>
 	Introduction: 
 		<form:textarea path="introduction" required="true"/><p/>
