@@ -15,7 +15,8 @@
 <hr/>
 <form:form action="displayUserInfo" modelAttribute="user">
 	Name: <form:input path="name" required="true" placeholder="Enter name"/><p/>
-	Gender: <form:radiobuttons path="gender" required="true" items="${genderMap}" />
+	Gender: Male: <form:radiobutton path="gender" value="Male" required="true" />
+			Female: <form:radiobutton path="gender" value="Female" required="true" />
 			<br>
 	Country: <form:select path="country" items="${countryMap}"/>
 			<p/>
