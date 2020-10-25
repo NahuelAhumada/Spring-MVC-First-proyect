@@ -11,6 +11,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,8 +26,8 @@ import org.studyeasy.model.User;
 @Controller
 public class MainController {
 		@GetMapping("/")
-		public ModelAndView home() {
-			ModelAndView modelAndView=new ModelAndView("userFormView");
+		public String home(ModelMap map) {
+			
 			User user=new User();
 			//Gender Map
 			Map<String, String> genderMap=new HashMap<String,String>();
@@ -40,10 +41,10 @@ public class MainController {
 			countryMap.put("Bolivia", "Bolivia");
 			countryMap.put("Ecuador", "Ecuador");
 			
-			modelAndView.addObject("countryMap", countryMap);
-			modelAndView.addObject("genderMap",genderMap);
-			modelAndView.addObject("user",user);
-			return modelAndView;
+			map.addAttribute("countryMap", countryMap);
+			map.addAttribute("genderMap",genderMap);
+			map.addAttribute("user",user);
+			return "userFormView";
 		}
 		@PostMapping("/displayUserInfo")
 		public ModelAndView displayUserInfo(@Valid User user, BindingResult result) {
