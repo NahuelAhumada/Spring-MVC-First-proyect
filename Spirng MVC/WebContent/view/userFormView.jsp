@@ -30,6 +30,8 @@
 			<p/>
 	Introduction: 
 		<form:textarea path="introduction" required="true"/><p/>
+		
+		<form:errors path="introduction" cssStyle="color:red"/><p/>
 	Visited countries: 
 			China: <form:checkbox path="visitedCountries" value="China"/>
 			Japan: <form:checkbox path="visitedCountries" value="Japon"/>
